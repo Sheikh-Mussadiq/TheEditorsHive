@@ -1,10 +1,17 @@
-import { Film, Edit, Palette, Megaphone, PenTool, Lightbulb } from "lucide-react"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import PageHeader from "@/components/page-header"
-import ServiceCard from "@/components/service-card"
-import ProcessStep from "@/components/process-step"
-import FaqAccordion from "@/components/faq-accordion"
+import {
+  Film,
+  Edit,
+  Palette,
+  Megaphone,
+  PenTool,
+  Lightbulb,
+} from "lucide-react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import PageHeader from "@/components/page-header";
+import ServiceCard from "@/components/service-card";
+import ProcessStep from "@/components/process-step";
+import FaqAccordion from "@/components/faq-accordion";
 
 export default function ServicesPage() {
   return (
@@ -18,53 +25,57 @@ export default function ServicesPage() {
       <main className="container px-4 py-12 mx-auto">
         <section className="py-12">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">What We Offer</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">
+              What We Offer
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our comprehensive range of video production services ensures that we can handle your project from concept
-              to completion.
+              Our comprehensive range of video production services ensures that
+              we can handle your project from concept to completion.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <ServiceCard
               icon={<Film className="w-10 h-10" />}
-              title="Commercial Production"
-              description="High-quality commercials that capture attention and drive engagement with your brand."
+              title="YoutTube video Editing"
+              description="Maximize your YouTube channel's potential with our professional editing services. We understand the nuances of YouTube content, from engaging intros and seamless transitions to dynamic graphics and sound design. Our team ensures your videos are optimized for viewer retention and platform algorithms, helping you grow your audience and elevate your brand."
             />
             <ServiceCard
               icon={<Edit className="w-10 h-10" />}
-              title="Video Editing"
-              description="Professional editing services to transform your raw footage into compelling stories."
+              title="Reels Editing"
+              description="Capture attention and drive engagement with our fast-paced, trend-savvy Reels editing. We specialize in creating captivating short-form video content for Instagram, TikTok, and other platforms. Our team understands the power of quick cuts, trending audio, and eye-catching visuals, ensuring your Reels stand out in the crowded social media landscape."
             />
             <ServiceCard
               icon={<Palette className="w-10 h-10" />}
-              title="Motion Graphics"
-              description="Eye-catching animations and visual effects that enhance your video content."
+              title="Business Ads"
+              description="Elevate your brand and drive conversions with our expertly crafted business ad videos. We create compelling visual narratives that resonate with your target audience, delivering clear messaging and impactful calls to action. Our collaborative team ensures your ads are optimized for various platforms, maximizing your ROI and achieving your marketing goals."
             />
             <ServiceCard
               icon={<Megaphone className="w-10 h-10" />}
-              title="Corporate Videos"
-              description="Professional videos that communicate your company's message, values, and culture."
+              title="Event Videos"
+              description="Preserve your most memorable moments with our professional event video editing. From conferences and weddings to concerts and corporate events, we capture the essence of your event and create engaging videos that tell your story. Our team delivers polished, high-quality videos that you and your audience will cherish."
             />
             <ServiceCard
               icon={<PenTool className="w-10 h-10" />}
               title="Content Creation"
-              description="Engaging content for social media, websites, and marketing campaigns."
+              description="Transform your ideas into compelling digital content that resonates with your audience. Our expert team crafts engaging stories across social media, websites, and marketing campaigns. We combine creative storytelling with strategic thinking to produce content that drives engagement, builds brand awareness, and connects with your target audience on a deeper level."
             />
             <ServiceCard
               icon={<Lightbulb className="w-10 h-10" />}
               title="Creative Direction"
-              description="Strategic guidance to ensure your video aligns with your brand and objectives."
+              description="Get strategic guidance and creative vision to elevate your video content to new heights. Our experienced creative directors work closely with you to understand your brand identity, target audience, and business objectives. We develop comprehensive creative strategies that ensure your content stands out, delivers your message effectively, and achieves measurable results."
             />
           </div>
         </section>
 
         <section className="py-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Our Process</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">
+              Our Process
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We follow a structured approach to ensure every project is delivered on time, within budget, and exceeds
-              expectations.
+              We follow a structured approach to ensure every project is
+              delivered on time, within budget, and exceeds expectations.
             </p>
           </div>
 
@@ -99,9 +110,12 @@ export default function ServicesPage() {
 
         <section className="py-16">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">
+              Frequently Asked Questions
+            </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Have questions about our services? Find answers to common inquiries below.
+              Have questions about our services? Find answers to common
+              inquiries below.
             </p>
           </div>
 
@@ -141,6 +155,5 @@ export default function ServicesPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
-

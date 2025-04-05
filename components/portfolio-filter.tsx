@@ -1,19 +1,22 @@
 "use client"
 
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
-export default function PortfolioFilter() {
-  const [activeFilter, setActiveFilter] = useState("all")
+interface PortfolioFilterProps {
+  activeFilter: string
+  setActiveFilter: (filter: string) => void
+}
 
+export default function PortfolioFilter({ activeFilter, setActiveFilter }: PortfolioFilterProps) {
   const filters = [
     { id: "all", label: "All" },
     { id: "commercial", label: "Commercial" },
     { id: "corporate", label: "Corporate" },
-    { id: "social", label: "Social Media" },
-    { id: "event", label: "Event" },
     { id: "documentary", label: "Documentary" },
+    { id: "travel", label: "Travel" },
+    { id: "event", label: "Event" },
+    { id: "social", label: "Social Media" },
   ]
 
   return (

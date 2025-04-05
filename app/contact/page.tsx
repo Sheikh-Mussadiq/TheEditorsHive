@@ -1,8 +1,8 @@
-import { Mail, Phone, MapPin, Clock } from "lucide-react"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import PageHeader from "@/components/page-header"
-import ContactForm from "@/components/contact-form"
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import PageHeader from "@/components/page-header";
+import ContactForm from "@/components/contact-form";
 
 export default function ContactPage() {
   return (
@@ -17,9 +17,12 @@ export default function ContactPage() {
         <section className="grid gap-12 py-12 md:grid-cols-2 md:gap-16 items-start">
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight mb-6">Get In Touch</h2>
+              <h2 className="text-3xl font-bold tracking-tight mb-6">
+                Get In Touch
+              </h2>
               <p className="text-muted-foreground mb-8">
-                We'd love to hear about your project. Contact us using the form or the information below.
+                We'd love to hear about your project. Contact us using the form
+                or the information below.
               </p>
             </div>
 
@@ -30,8 +33,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Email Us</h3>
-                  <p className="text-muted-foreground">info@visionaryfilms.com</p>
-                  <p className="text-muted-foreground">support@visionaryfilms.com</p>
+                  <p className="text-muted-foreground">
+                    husnain@theeditorshive.com
+                  </p>
+                  {/* <p className="text-muted-foreground">support@visionaryfilms.com</p> */}
                 </div>
               </div>
 
@@ -41,8 +46,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Call Us</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                  <p className="text-muted-foreground">+1 (555) 765-4321</p>
+                  <p className="text-muted-foreground">+92 3245274464</p>
+                  {/* <p className="text-muted-foreground">+1 (555) 765-4321</p> */}
                 </div>
               </div>
 
@@ -52,8 +57,8 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Visit Us</h3>
-                  <p className="text-muted-foreground">123 Creative Avenue</p>
-                  <p className="text-muted-foreground">Suite 456, Los Angeles, CA 90001</p>
+                  <p className="text-muted-foreground">Islamabad</p>
+                  <p className="text-muted-foreground">Pakistan</p>
                 </div>
               </div>
 
@@ -63,8 +68,12 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-medium">Business Hours</h3>
-                  <p className="text-muted-foreground">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-muted-foreground">Saturday - Sunday: Closed</p>
+                  <p className="text-muted-foreground">
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                  </p>
+                  <p className="text-muted-foreground">
+                    Saturday - Sunday: Closed
+                  </p>
                 </div>
               </div>
             </div>
@@ -79,6 +88,5 @@ export default function ContactPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
-

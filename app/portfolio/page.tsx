@@ -1,8 +1,7 @@
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import PageHeader from "@/components/page-header"
-import PortfolioFilter from "@/components/portfolio-filter"
-import PortfolioGrid from "@/components/portfolio-grid"
+import PortfolioSection from "@/components/portfolio-section"
 
 export default function PortfolioPage() {
   return (
@@ -15,8 +14,7 @@ export default function PortfolioPage() {
 
       <main className="container px-4 py-12 mx-auto">
         <section className="py-12">
-          <PortfolioFilter />
-          <PortfolioGrid />
+          <PortfolioSection />
         </section>
       </main>
 

@@ -1,9 +1,9 @@
-import Image from "next/image"
-import { CheckCircle, Award, Users, Zap } from "lucide-react"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import PageHeader from "@/components/page-header"
-import TeamMember from "@/components/team-member"
+import Image from "next/image";
+import { CheckCircle, Award, Users, Zap } from "lucide-react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import PageHeader from "@/components/page-header";
+import TeamMember from "@/components/team-member";
 
 export default function AboutPage() {
   return (
@@ -19,46 +19,61 @@ export default function AboutPage() {
           <div className="space-y-6">
             <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
             <p className="text-muted-foreground">
-              Founded in 2015, Visionary Films has been at the forefront of video production, combining technical
-              expertise with creative storytelling to deliver exceptional content for our clients.
+              Founded in 2015, Visionary Films has been at the forefront of
+              video production, combining technical expertise with creative
+              storytelling to deliver exceptional content for our clients.
             </p>
             <p className="text-muted-foreground">
-              What started as a small team of passionate filmmakers has grown into a full-service video agency, serving
-              clients across industries and continents.
+              What started as a small team of passionate filmmakers has grown
+              into a full-service video agency, serving clients across
+              industries and continents.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="flex items-start gap-2">
                 <CheckCircle className="w-5 h-5 mt-1 text-primary" />
                 <div>
                   <h3 className="font-medium">Quality First</h3>
-                  <p className="text-sm text-muted-foreground">We never compromise on quality</p>
+                  <p className="text-sm text-muted-foreground">
+                    We never compromise on quality
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Award className="w-5 h-5 mt-1 text-primary" />
                 <div>
                   <h3 className="font-medium">Award Winning</h3>
-                  <p className="text-sm text-muted-foreground">Multiple industry awards</p>
+                  <p className="text-sm text-muted-foreground">
+                    Multiple industry awards
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Users className="w-5 h-5 mt-1 text-primary" />
                 <div>
                   <h3 className="font-medium">Client Focused</h3>
-                  <p className="text-sm text-muted-foreground">Your vision is our priority</p>
+                  <p className="text-sm text-muted-foreground">
+                    Your vision is our priority
+                  </p>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <Zap className="w-5 h-5 mt-1 text-primary" />
                 <div>
                   <h3 className="font-medium">Fast Delivery</h3>
-                  <p className="text-sm text-muted-foreground">On-time, every time</p>
+                  <p className="text-sm text-muted-foreground">
+                    On-time, every time
+                  </p>
                 </div>
               </div>
             </div>
           </div>
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-xl">
-            <Image src="/placeholder.svg?height=600&width=800" alt="Our team at work" fill className="object-cover" />
+            <Image
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+              alt="Our team at work"
+              fill
+              className="object-cover"
+            />
           </div>
         </section>
 
@@ -66,8 +81,9 @@ export default function AboutPage() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight mb-4">Our Team</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Meet the talented individuals who make the magic happen. Our diverse team brings together expertise from
-              various backgrounds to create compelling visual stories.
+              Meet the talented individuals who make the magic happen. Our
+              diverse team brings together expertise from various backgrounds to
+              create compelling visual stories.
             </p>
           </div>
 
@@ -75,37 +91,37 @@ export default function AboutPage() {
             <TeamMember
               name="Alex Morgan"
               role="Creative Director"
-              image="/placeholder.svg?height=400&width=400"
+              image="https://images.unsplash.com/photo-1560250097-0b93528c311a"
               bio="With over 15 years in the industry, Alex leads our creative vision and ensures every project exceeds expectations."
             />
             <TeamMember
               name="Jamie Chen"
               role="Lead Cinematographer"
-              image="/placeholder.svg?height=400&width=400"
+              image="https://images.unsplash.com/photo-1438761681033-6461ffad8d80"
               bio="Jamie's eye for composition and lighting has been featured in award-winning commercials and short films."
             />
             <TeamMember
               name="Taylor Reed"
               role="Senior Editor"
-              image="/placeholder.svg?height=400&width=400"
+              image="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
               bio="Taylor transforms raw footage into compelling narratives with a keen sense of pacing and emotion."
             />
             <TeamMember
               name="Jordan Smith"
               role="Motion Graphics Designer"
-              image="/placeholder.svg?height=400&width=400"
+              image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6"
               bio="Jordan creates stunning visual effects and animations that elevate our productions to the next level."
             />
             <TeamMember
               name="Casey Williams"
               role="Production Manager"
-              image="/placeholder.svg?height=400&width=400"
+              image="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
               bio="Casey ensures our projects run smoothly from concept to delivery, keeping everything on schedule and within budget."
             />
             <TeamMember
               name="Riley Johnson"
               role="Sound Designer"
-              image="/placeholder.svg?height=400&width=400"
+              image="https://images.unsplash.com/photo-1519345182560-3f2917c472ef"
               bio="Riley crafts immersive soundscapes that complement our visuals and enhance the overall viewing experience."
             />
           </div>
@@ -120,7 +136,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-medium mb-2">Excellence</h3>
               <p className="text-muted-foreground">
-                We strive for excellence in every frame, every edit, and every project we deliver.
+                We strive for excellence in every frame, every edit, and every
+                project we deliver.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5">
@@ -129,7 +146,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-medium mb-2">Collaboration</h3>
               <p className="text-muted-foreground">
-                We believe the best work comes from true partnership with our clients and within our team.
+                We believe the best work comes from true partnership with our
+                clients and within our team.
               </p>
             </div>
             <div className="p-6 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5">
@@ -138,7 +156,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-medium mb-2">Innovation</h3>
               <p className="text-muted-foreground">
-                We constantly push boundaries and explore new techniques to keep our work fresh and impactful.
+                We constantly push boundaries and explore new techniques to keep
+                our work fresh and impactful.
               </p>
             </div>
           </div>
@@ -147,6 +166,5 @@ export default function AboutPage() {
 
       <Footer />
     </div>
-  )
+  );
 }
-

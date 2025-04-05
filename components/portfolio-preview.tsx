@@ -2,35 +2,35 @@
 
 import { useRef } from "react"
 import Link from "next/link"
-import Image from "next/image"
-import { Play, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion, useInView } from "framer-motion"
+import YouTubeEmbed from "@/components/youtube-embed"
 
 export default function PortfolioPreview() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
 
-  const projects = [
+  const featuredProjects = [
     {
-      title: "Brand Commercial",
+      title: "Cinematic Travel Montage",
+      category: "Travel",
+      videoId: "HEavaiixtkY",
+    },
+    {
+      title: "Urban Exploration",
+      category: "Documentary",
+      videoId: "O86cRhpe35w",
+    },
+    {
+      title: "Product Showcase",
       category: "Commercial",
-      image: "/placeholder.svg?height=600&width=800&text=Commercial",
+      videoId: "lWQRBbP0cGg",
     },
     {
-      title: "Corporate Overview",
-      category: "Corporate",
-      image: "/placeholder.svg?height=600&width=800&text=Corporate",
-    },
-    {
-      title: "Product Launch",
-      category: "Marketing",
-      image: "/placeholder.svg?height=600&width=800&text=Product",
-    },
-    {
-      title: "Event Highlights",
-      category: "Events",
-      image: "/placeholder.svg?height=600&width=800&text=Event",
+      title: "Fashion Promo",
+      category: "Commercial",
+      videoId: "AWjf495zK-o",
     },
   ]
 
@@ -78,37 +78,21 @@ export default function PortfolioPreview() {
           animate={isInView ? "visible" : "hidden"}
           className="grid gap-6 md:grid-cols-2 lg:grid-cols-4"
         >
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               className="group relative aspect-[4/5] rounded-lg overflow-hidden"
             >
-              <Image
-                src={project.image || "/placeholder.svg"}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute inset-0 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="mb-2">
-                  <span className="inline-block px-2 py-1 rounded text-xs bg-primary/80 text-primary-foreground">
-                    {project.category}
-                  </span>
-                </div>
-                <h3 className="text-xl font-medium text-white mb-2">{project.title}</h3>
-                <Link
-                  href="/portfolio"
-                  className="inline-flex items-center text-sm font-medium text-white hover:text-primary"
-                >
-                  View Project
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="w-12 h-12 rounded-full bg-primary/90 flex items-center justify-center cursor-pointer hover:bg-primary transition-colors">
-                  <Play className="w-5 h-5 text-white ml-0.5" />
+              <div className="h-full">
+                <YouTubeEmbed videoId={project.videoId} title={project.title} />
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent z-20 pointer-events-none">
+                  <div className="mb-1">
+                    <span className="inline-block px-2 py-1 rounded text-xs bg-primary/80 text-primary-foreground">
+                      {project.category}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-medium text-white">{project.title}</h3>
                 </div>
               </div>
             </motion.div>

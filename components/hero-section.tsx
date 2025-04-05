@@ -5,13 +5,29 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, useInView, useAnimation } from "framer-motion";
-const HeroVideo = "/videos/background.mp4";
-import HeroVideoBG from "@/app/assets/background.mp4";
+
+import heroBG from "@/app/assets/background.mp4";
+
+import companyLogo1 from "@/app/assets/Black-and-White-Modern-Fitness-Club-Logo.png"; // Adjust the path as necessary
+import companyLogo2 from "@/app/assets/Black-and-White-Modern-Gym-Center-Logo.png"; // Adjust the path as necessary
+import companyLogo3 from "@/app/assets/Blue-Corporate-Illustrative-Flat-Investment-Group-Finance-Logo-1.png"; // Adjust the path as necessary
+import companyLogo4 from "@/app/assets/Blue-Modern-W-Letter-Company-Business-Logo.png"; // Adjust the path as necessary
+import companyLogo5 from "@/app/assets/White-and-Black-Real-Estate-Agent-Logo.png"; // Adjust the path as necessary
+import companyLogo6 from "@/app/assets/White-and-Blue-Flat-Illustrative-Real-Estate-Agency-Logo-1.png"; // Adjust the path as necessary
 
 export default function HeroSection() {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
+
+  const logos = [
+    { src: companyLogo1.src, alt: "Fitness Club Logo" },
+    { src: companyLogo2.src, alt: "Gym Center Logo" },
+    { src: companyLogo3.src, alt: "Investment Group Logo" },
+    { src: companyLogo4.src, alt: "W Letter Company Logo" },
+    { src: companyLogo5.src, alt: "Real Estate Agent Logo" },
+    { src: companyLogo6.src, alt: "Real Estate Agency Logo" },
+  ];
 
   useEffect(() => {
     if (isInView) {
@@ -39,6 +55,20 @@ export default function HeroSection() {
     },
   };
 
+  const marqueeVariants = {
+    animate: {
+      x: [0, -1035],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "loop",
+          duration: 35, // Increased duration for smoother animation
+          ease: "linear",
+        },
+      },
+    },
+  };
+
   return (
     <section
       className="relative h-screen flex items-center justify-center overflow-hidden"
@@ -53,7 +83,7 @@ export default function HeroSection() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src={HeroVideoBG} type="video/mp4" />
+          <source src={heroBG} type="video/mp4" />
           {/* Fallback background for browsers that don't support video */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-background/80 to-background"></div>
         </video>
@@ -116,7 +146,7 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="text-sm">
-              <span className="font-medium">Trusted by 100+ clients</span>
+              <span className="font-medium">Trusted by 1000+ clients</span>
               <div className="flex text-yellow-500 justify-center">
                 <span>★★★★★</span>
                 <span className="text-muted-foreground ml-1">(4.9/5)</span>
@@ -124,21 +154,32 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Clients logos - now part of the normal flow with margin-top */}
-          <motion.div variants={itemVariants} className="mt-auto">
-            <p className="text-center text-sm text-muted-foreground mb-6">
+          {/* Clients logos section */}
+          <motion.div
+            variants={itemVariants}
+            className="mt-auto overflow-hidden max-w-3xl mx-auto w-full"
+          >
+            <p className="text-center text-sm md:text-lg text-muted-foreground mb-6">
               Trusted by leading brands worldwide
             </p>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12 opacity-70">
-              {[1, 2, 3, 4, 5].map((i) => (
-                <div key={i} className="h-8 w-24">
-                  <img
-                    src={`/placeholder.svg?height=40&width=120&text=LOGO ${i}`}
-                    alt={`Client logo ${i}`}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-              ))}
+            <div className="relative w-full overflow-hidden">
+              <div className="flex relative">
+                <motion.div
+                  className="flex gap-6 md:gap-8 shrink-0" // Increased gap for better spacing
+                  variants={marqueeVariants}
+                  animate="animate"
+                >
+                  {[...logos, ...logos, ...logos].map((logo, i) => (
+                    <div key={i} className="h-14 w-24 md:h-20 md:w-28 shrink-0">
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        className="h-full w-full object-contain opacity-70"
+                      />
+                    </div>
+                  ))}
+                </motion.div>
+              </div>
             </div>
           </motion.div>
         </motion.div>
